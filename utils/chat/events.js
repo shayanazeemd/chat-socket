@@ -68,11 +68,11 @@ export async function updateSeenMessage(io, _socket, { message }) {
 export async function sendTypingUser(io, _socket, { roomId, userId }) {
   const currentUserData = await userModel.findOne({ _id: userId });
 
-  io.in(roomId.toString()).emit("receive_typing_flag", currentUserData);
+  io.in(roomId.toString()).emit("receive_typing_user", currentUserData);
 }
 
 export async function clearTypingUser(io, _socket, { roomId, userId }) {
   const currentUserData = await userModel.findOne({ _id: userId });
 
-  io.in(roomId.toString()).emit("receive_clear_typing_flag", currentUserData);
+  io.in(roomId.toString()).emit("receive_clear_typing_user", currentUserData);
 }
