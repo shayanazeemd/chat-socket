@@ -3,8 +3,6 @@
 This is an example of implementing a chat using sockets.
 
 ## Setup Chat Socket Function
-Chat using Socket IO
-	
 This function sets up a chat server using Socket.IO for real-time communication. It handles various chat-related events such as joining a room, sending messages, updating messages, and handling typing and message seen indicators.
 
 ### It sets up event listeners:
