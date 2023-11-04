@@ -22,7 +22,7 @@ export async function sendMessage(io, _socket, { message, fileUploadPath }) {
   if (foundRoomData) {
     if (message.attachment.fileName !== "") {
       const attachment = {
-        fileName: message.attachment.fileName,
+        fileName: Data.now() + message.attachment.fileName,
         fileType: message.attachment.fileType,
       };
       const attachmentData = await fileModel.create(attachment);
